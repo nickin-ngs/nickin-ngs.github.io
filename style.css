@@ -1,0 +1,377 @@
+@font-face {
+    font-family: 'Open Sans';
+    src: url('assets/fonts/Open_Sans/OpenSans-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('assets/fonts/Open_Sans/OpenSans-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('assets/fonts/Open_Sans/OpenSans-ExtraBold.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('assets/fonts/Open_Sans/OpenSans-Italic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('assets/fonts/Open_Sans/OpenSans-BoldItalic.ttf') format('truetype');
+    font-weight: 700;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('assets/fonts/Open_Sans/OpenSans-ExtraBoldItalic.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Noto Sans Thai';
+    src: url('assets/fonts/Noto_Sans_Thai/NotoSansThai-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Noto Sans Thai';
+    src: url('assets/fonts/Noto_Sans_Thai/NotoSansThai-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Noto Sans Thai';
+    src: url('assets/fonts/Noto_Sans_Thai/NotoSansThai-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+* {
+    font-family: 'Open Sans', 'Noto Sans Thai', sans-serif;
+    scroll-behavior: smooth;
+    transition: 0.3s ease;
+    margin: 0;
+}
+
+body {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+header {
+    background-color: #0055ff;
+    padding: 20px 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1000;
+}
+
+.logo {
+    width: 150px;
+}
+
+header nav {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+header nav a {
+    color: #ffffff;
+    font-size: 2rem;
+    font-weight: 900;
+    font-style: italic;
+    letter-spacing: -0.05em;
+    line-height: 1;
+    text-transform: uppercase;
+    margin: 0 20px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+header button {
+    border: none;
+    background: #ffffff;
+    color: #0055ff;
+    padding: 8px 16px;
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.nav-dropdown {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 140%;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+
+    background: #0055ff;
+    min-width: 220px;
+
+    opacity: 0;
+    pointer-events: none;
+    z-index: 2000;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 15px;
+
+    color: #ffffff;
+    font-size: 2rem;
+    font-weight: 900;
+    font-style: italic;
+    text-transform: uppercase;
+    letter-spacing: -0.04em;
+
+    margin: 0;
+    border-bottom: none;
+}
+
+.nav-dropdown.active .dropdown-menu {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+    pointer-events: auto;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+footer {
+    background-color: #0055ff;
+    color: #ffffff;
+    padding: 50px 100px;
+    text-align: center;
+}
+
+section {
+    padding: 30px 100px;
+    text-align: left;
+}
+
+section .title {
+    font-size: 3rem;
+    font-weight: 900;
+    font-style: italic;
+    letter-spacing: -0.05em;
+    line-height: 1;
+    text-transform: uppercase;
+    color: #000000;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#slideshow {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    padding: 0;
+}
+
+#slideshow .slide {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: 1s ease;
+}
+
+#slideshow .slide.active {
+    opacity: 1;
+}
+
+
+.slide-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    background: none;
+    border: none;
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.slide-btn.prev {
+    left: 20px;
+}
+
+.slide-btn.next {
+    right: 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 900;
+    font-style: italic;
+    letter-spacing: -0.05em;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+#about p {
+    margin: 30px 60px 0px 60px;
+}
+
+.works-grid {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 30px;
+}
+
+.work-card {
+    width: 400px;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+}
+
+.work-card img {
+    width: 70%;
+}
+
+.work-card:hover {
+    opacity: 1;
+}
+
+.work-card:hover img {
+    width: 80%;
+}
+
+.team-grid {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+    gap: 30px;
+}
+
+.team-card {
+    padding: 24px 20px;
+    text-align: center;
+    cursor: default;
+}
+
+.team-card img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    margin-bottom: 16px;
+    transform: rotate(10deg) scale(0.8);
+}
+
+.team-card:hover img {
+    transform: rotate(0deg) scale(1);
+}
+
+.team-name {
+    font-size: 1.4rem;
+    font-weight: 900;
+    font-style: italic;
+    letter-spacing: -0.05em;
+    line-height: 1.5;
+    text-transform: uppercase;
+    color: #000000;
+    text-align: center;
+}
+
+.team-role {
+    margin-top: 6px;
+    font-size: 0.95rem;
+    color: #000000;
+}
+
+a {
+    color: #0055ff;
+    text-decoration: none;
+}
+
+a:hover {
+    opacity: 0.5;
+}
+
+.visions {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 30px;
+}
+
+.visions > div {
+    flex: 1;
+    padding: 32px 20px;
+    text-align: center;
+    font-size: 2.6rem;
+    font-weight: 600;
+    line-height: 1.4;
+    background-color: #f8f8f8;
+    height: 170px;
+    cursor: default;
+    color: #000000;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.visions .left:hover {
+    background-color: #0055ff;
+    color: #ffffff;
+}
+
+.visions .center:hover {
+    background-color: #22C55E;
+    color: #ffffff;
+}
+
+.visions .right:hover {
+    background-color: #F97316;
+    color: #ffffff;
+}
+
+.visions br + text,
+.visions span {
+    font-size: 1rem;
+    font-weight: 400;
+    opacity: 0.75;
+}
