@@ -2,7 +2,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <style>
         * {
             margin: 0;
@@ -23,13 +22,18 @@
         .container {
             width: 100%;
             height: 100%;
-            background-color: #00000050;
+            background-color: #00000099;
         }
 
         h1 {
             font-size: 5rem;
             font-weight: 800;
             letter-spacing: 4px;
+        }
+
+        h2 {
+            margin: 20px 0 30px;
+            font-size: 2rem;
         }
 
         p {
@@ -40,12 +44,24 @@
     </style>
 </head>
 <body>
-
     <div class="container">
         <h1>ไม่พบหน้านี้</h1>
         <p>หน้าที่คุณกำลังค้นหาอาจถูกลบไปแล้ว หรือไม่มีอยู่จริง</p>
-        <a href="/">back to home</a>
+        <h2>เราจะนำคุณกลับหน้าหลักภายใน</h2>
     </div>
+    <script>
+    let timeLeft = 5;
+    const countdownText = document.querySelector("h2");
 
+    const timer = setInterval(() => {
+        countdownText.textContent = `เราจะนำคุณกลับหน้าหลักภายใน ${timeLeft} วินาที`;
+        timeLeft--;
+
+        if (timeLeft < 0) {
+            clearInterval(timer);
+            window.location.href = "/";
+        }
+    }, 1000);
+</script>
 </body>
 </html>
