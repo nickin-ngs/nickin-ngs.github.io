@@ -69,12 +69,12 @@
 }
 
 body {
-    background-color: #ffffff;
-    color: #000000;
+    background-color: #090909;
+    color: #ffffff;
 }
 
 header {
-    background-color: #0055ff;
+    background-color: #000000;
     padding: 20px 100px;
     display: flex;
     align-items: center;
@@ -110,7 +110,7 @@ header nav a {
 header button {
     border: none;
     background: #ffffff;
-    color: #0055ff;
+    color: #000000;
     padding: 8px 16px;
     font-size: 1.3rem;
     font-weight: 700;
@@ -118,58 +118,8 @@ header button {
     cursor: pointer;
 }
 
-.nav-dropdown {
-    position: relative;
-    display: flex;
-    align-items: center;
-}
-
-.dropdown-menu {
-    position: absolute;
-    top: 140%;
-    left: 50%;
-    transform: translateX(-50%) translateY(10px);
-
-    background: #0055ff;
-    min-width: 220px;
-
-    opacity: 0;
-    pointer-events: none;
-    z-index: 2000;
-}
-
-.dropdown-menu a {
-    display: block;
-    padding: 15px;
-
-    color: #ffffff;
-    font-size: 2rem;
-    font-weight: 900;
-    font-style: italic;
-    text-transform: uppercase;
-    letter-spacing: -0.04em;
-
-    margin: 0;
-    border-bottom: none;
-}
-
-.nav-dropdown.active .dropdown-menu {
-    opacity: 1;
-    transform: translateX(-50%) translateY(0);
-    pointer-events: auto;
-}
-
-.menu-toggle {
-    display: none;
-    background: none;
-    border: none;
-    color: #ffffff;
-    font-size: 2rem;
-    cursor: pointer;
-}
-
 footer {
-    background-color: #0055ff;
+    background-color: #000000;
     color: #ffffff;
     padding: 50px 100px;
     text-align: center;
@@ -187,7 +137,7 @@ section .title {
     letter-spacing: -0.05em;
     line-height: 1;
     text-transform: uppercase;
-    color: #000000;
+    color: #ffffff;
     text-align: center;
     margin-bottom: 20px;
 }
@@ -286,9 +236,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .team-card {
-    padding: 24px 20px;
     text-align: center;
-    cursor: default;
 }
 
 .team-card img {
@@ -310,14 +258,14 @@ h1, h2, h3, h4, h5, h6 {
     letter-spacing: -0.05em;
     line-height: 1.5;
     text-transform: uppercase;
-    color: #000000;
+    color: #ffffff;
     text-align: center;
 }
 
 .team-role {
     margin-top: 6px;
     font-size: 0.95rem;
-    color: #000000;
+    color: #ffffff;
 }
 
 a {
@@ -343,7 +291,7 @@ a:hover {
     font-size: 2.6rem;
     font-weight: 600;
     line-height: 1.4;
-    background-color: #ffffff;
+    background-color: transparent;
     height: 170px;
     cursor: default;
     color: #000000;
