@@ -31,11 +31,6 @@
             letter-spacing: 4px;
         }
 
-        h2 {
-            margin: 20px 0 30px;
-            font-size: 2rem;
-        }
-
         p {
             margin: 20px 0 30px;
             font-size: 1.1rem;
@@ -47,21 +42,8 @@
     <div class="container">
         <h1>ไม่พบหน้านี้</h1>
         <p>หน้าที่คุณกำลังค้นหาอาจถูกลบไปแล้ว หรือไม่มีอยู่จริง</p>
-        <h2>เราจะนำคุณกลับหน้าหลักภายใน</h2>
+        <a href="/">back to home page</a>
     </div>
-    <script>
-    let timeLeft = 5;
-    const countdownText = document.querySelector("h2");
-
-    const timer = setInterval(() => {
-        countdownText.textContent = `เราจะนำคุณกลับหน้าหลักภายใน ${timeLeft} วินาที`;
-        timeLeft--;
-
-        if (timeLeft < 0) {
-            clearInterval(timer);
-            window.location.href = "/";
-        }
-    }, 1000);
-</script>
 </body>
 </html>
+
